@@ -69,7 +69,11 @@ require("lazy").setup({
 {'hrsh7th/nvim-cmp',
     dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
 },
-'nvim-lualine/lualine.nvim',
+{
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
+
+},
 'numToStr/Comment.nvim',
 {'L3MON4D3/LuaSnip'},
 {'rktjmp/lush.nvim'},
