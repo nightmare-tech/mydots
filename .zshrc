@@ -26,18 +26,19 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
  
 # aliases
-egrep='grep -E --color=auto'
-fgrep='grep -F --color=auto'
-grep='grep --color=auto'
-ll='ls -l --color=auto'
-ls='ls --color=auto'
-which='alias | /usr/bin/which --tty-only --read-alias --show-tilde --show-dot'
-xzegrep='xzegrep --color=auto'
-xzfgrep='xzfgrep --color=auto'
-xzgrep='xzgrep --color=auto'
-zegrep='zegrep --color=auto'
-zfgrep='zfgrep --color=auto'
-zgrep='zgrep --color=auto'
+alias egrep='grep -E --color=auto'
+alias fgrep='grep -F --color=auto'
+alias grep='grep --color=auto'
+alias la='ls -la --color=auto'
+alias ll='ls -l --color=auto'
+alias ls='ls --color=auto'
+alias which='alias | /usr/bin/which --tty-only --read-alias --show-tilde --show-dot'
+alias xzegrep='xzegrep --color=auto'
+alias xzfgrep='xzfgrep --color=auto'
+alias xzgrep='xzgrep --color=auto'
+alias zegrep='zegrep --color=auto'
+alias zfgrep='zfgrep --color=auto'
+alias zgrep='zgrep --color=auto'
  
 # syntax highlighting
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

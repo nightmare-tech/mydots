@@ -11,7 +11,8 @@ require("plugins.nvimtree")
 require("plugins.obsidian")
 require("plugins.misc")
 require("plugins.lualine")
-
 require("misc")
 require("mason").setup()
-vim.cmd('colorscheme jellybeans-nvim')
+require('luatab').setup{}
+vim.cmd('colorscheme oxocarbon')
+vim.o.laststatus=3

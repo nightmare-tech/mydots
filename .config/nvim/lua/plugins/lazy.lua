@@ -13,21 +13,20 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
+    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+    { 'alvarosevilla95/luatab.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
+    {
     'nvim-telescope/telescope.nvim', tag = '0.1.5',
       dependencies = { 'nvim-lua/plenary.nvim' }
     },
     'nvim-telescope/telescope-symbols.nvim',
-    {
-    "Mofiqul/adwaita.nvim",
+    {"nyoom-engineering/oxocarbon.nvim",
     lazy = false,
     priority = 1000,
-    
-    -- configure and set on startup
-    config = function()
-        vim.g.adwaita_darker = true             -- for darker version
-        vim.cmd('colorscheme adwaita')
-    end
-    },  
+    },
     {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
@@ -46,6 +45,12 @@ require("lazy").setup({
 	"mbbill/undotree"
     },
     {"tpope/vim-fugitive"},
+{
+  "j-hui/fidget.nvim",
+  opts = {
+    -- options
+  },
+},
 {
   "folke/which-key.nvim",
   event = "VeryLazy",
@@ -69,24 +74,15 @@ require("lazy").setup({
     dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
 },
 {
-    'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' }
-
+        "j-hui/fidget.nvim",
+        lazy = false
 },
+{'nvim-tree/nvim-web-devicons'},
 'numToStr/Comment.nvim',
 {'L3MON4D3/LuaSnip'},
-{'rktjmp/lush.nvim'},
-{'metalelf0/jellybeans-nvim'},
-{
-  "j-hui/fidget.nvim",
-  tag = "v1.0.0",
-  opts = {
-    -- options
-  },
-},
 {'nvim-tree/nvim-tree.lua'},
 {'ThePrimeagen/git-worktree.nvim'},
-  {
+{
     "folke/todo-comments.nvim",
     dependencies = "nvim-lua/plenary.nvim",
     lazy = false,
@@ -97,7 +93,7 @@ require("lazy").setup({
         -- refer to the configuration section below
       }
     end
-  },
+},
 
   {
     "epwalsh/obsidian.nvim",
@@ -123,40 +119,8 @@ require("lazy").setup({
       "nvim-lua/plenary.nvim",
     },
 },
+{"lewis6991/gitsigns.nvim"},
 
-  {
-    "folke/noice.nvim",
-    config = function()
-      require("noice").setup({
-        -- add any options here
-        routes = {
-          {
-            filter = {
-              event = 'msg_show',
-              any = {
-                { find = '%d+L, %d+B' },
-                { find = '; after #%d+' },
-                { find = '; before #%d+' },
-                { find = '%d fewer lines' },
-                { find = '%d more lines' },
-              },
-            },
-            opts = { skip = true },
-          }
-        },
-      })
-    end,
-    dependencies = {
-      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-      "MunifTanjim/nui.nvim",
-      -- OPTIONAL:
-      --   `nvim-notify` is only needed, if you want to use the notification view.
-      --   If not available, we use `mini` as the fallback
-      "rcarriga/nvim-notify",
-    }
-  },
-    {"lewis6991/gitsigns.nvim"},
-    
  {
     'rmagatti/goto-preview',
     config = function()
@@ -186,5 +150,4 @@ require("lazy").setup({
     "windwp/nvim-autopairs",
      config = function() require("nvim-autopairs").setup {} end
   },
-
 })

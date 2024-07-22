@@ -1,0 +1,16 @@
+theme = "adwaita-dark"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[keys.normal.W]
+W = ":w"
+Q = ":wq"
+
+[keys.normal.Q]
+Q = ":q"
+
+[keys.insert]
+"C-c" = "normal_mode"
